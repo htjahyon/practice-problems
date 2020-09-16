@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PH Analyzer</title>
+  </head>
+  <body>
+    <script>
+      function phAnalyzer(pH)
+      {
+        if (pH > 7 && pH <= 14)
+        {
+          return "alkaline";
+        }
+        else if (pH == 7)
+        {
+          return "neutral";
+        }
+        else if (pH >= 0 && pH < 7)
+        {
+          return "acidic";
+        }
+        else
+        {
+          return "invalid pH value";
+        }
+      }
+    </script>
+  </body>
+</html>
