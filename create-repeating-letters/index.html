@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Repeating Letters</title>
+  </head>
+  <body>
+    <script>
+    function createRepeatingLetters(word, numOfRepeats)
+    {
+      var result = "";
+      for(var i=0; i<word.length; i++)
+      {
+        var letters = "";
+        for(var j=0; j<numOfRepeats; j++)
+        {
+          letters += word[i];
+        }
+        result += letters;
+      }
+      return result;
+    }
+    console.log("createRepeatingLetters('John', 3)", createRepeatingLetters("John", 3));
+    console.log("createRepeatingLetters('car', 4)", createRepeatingLetters("car", 4));
+    console.log("createRepeatingLetters('howdy', 1)", createRepeatingLetters("howdy", 1));
+  </script>
+  </body>
+</html>
