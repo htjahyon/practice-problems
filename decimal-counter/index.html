@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Decimal Counter</title>
+  </head>
+  <body>
+    <script>
+      function decimalPlaceCounter(stringNumber)
+      {
+        var decimals = 0;
+        var startCount = false;
+        for(i=0; i<stringNumber.length; i++)
+        {
+          if(stringNumber[i] === ".")
+          {
+            startCount = true;
+          }
+          else if(startCount === true)
+          {
+            decimals++;
+          }
+        }
+        return decimals;
+      }
+      console.log("decimalPlaceCounter('127.245')", decimalPlaceCounter("127.245"));
+      console.log("decimalPlaceCounter('145')", decimalPlaceCounter("145"));
+      console.log("decimalPlaceCounter('23.00')", decimalPlaceCounter("23.00"));
+    </script>
+  </body>
+</html>
