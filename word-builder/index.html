@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Word Builder</title>
+  </head>
+  <body>
+    <script>
+      function wordBuilder(wordToSpell)
+      {
+        var array = [];
+        var word = "";
+        for(var i=0; i<wordToSpell.length; i++)
+        {
+            word += wordToSpell[i];
+            array.push(word);
+        }
+        return array;
+      }
+      console.log("wordBuilder('JavaScript')", wordBuilder("JavaScript"));
+      console.log("wordBuilder('Moon')", wordBuilder("Moon"));
+      console.log("wordBuilder('Stars')", wordBuilder("Stars"));
+    </script>
+  </body>
+</html>
