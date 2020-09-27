@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Is Santa Coming</title>
+</head>
+<body>
+  <script>
+function isSantaComing(dateObject)
+{
+  if(dateObject.getMonth() === 11 && dateObject.getDate() === 24)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+console.log("isSantaComing(new Date(2001,11,24))", isSantaComing(new Date(2001,11,24)));
+console.log("isSantaComing(new Date(2018,7,4))", isSantaComing(new Date(2018,7,4)));
+console.log("isSantaComing(new Date(1995,11,23,23,59,59))", isSantaComing(new Date(1995,11,23,23,59)));
+</script>
+</body>
+</html>
