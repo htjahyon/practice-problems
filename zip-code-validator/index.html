@@ -7,15 +7,13 @@
     <script>
       function zipCodeValidator(zipToValidate)
       {
-        var count = 0;
+        if(zipToValidate.length != 5)
+        {
+          return false;
+        }
         for(var i=0; i<zipToValidate.length; i++)
         {
-          count++;
-          if(zipToValidate[i] >= 'A' && zipToValidate[i] <= 'z')
-          {
-            return false;
-          }
-          if(count > 5)
+          if(zipToValidate[i] < '0' || zipToValidate[i] > '9')
           {
             return false;
           }
