@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zip Code Validator</title>
+  </head>
+  <body>
+    <script>
+      function zipCodeValidator(zipToValidate)
+      {
+        if(zipToValidate.length != 5)
+        {
+          return false;
+        }
+        for(var i=0; i<zipToValidate.length; i++)
+        {
+          if(zipToValidate[i] < '0' || zipToValidate[i] > '9')
+          {
+            return false;
+          }
+        }
+        return true;
+      }
+      console.log("zipCodeValidator('21594')", zipCodeValidator("21594"));
+      console.log("zipCodeValidator('3Eds32')", zipCodeValidator("3Eds32"));
+      console.log("zipCodeValidator('9123465')", zipCodeValidator("9123465"));
+    </script>
+  </body>
+</html>
